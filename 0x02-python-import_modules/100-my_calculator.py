@@ -4,7 +4,7 @@ if __name__ == "__main__":
     from sys import argv
     if len(argv) != 4:
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
-        exit (1)
+        exit(1)
     else:
         if argv[2] == "+":
             print("{}".format(add(int(argv[1]), int(argv[3]))))
@@ -16,5 +16,4 @@ if __name__ == "__main__":
             print("{}".format(div(int(argv[1]), int(argv[3]))))
         else:
             print("Unknown operator. Available operators: +, -, * and /")
-            exit (1)
-
+            exit(1)
