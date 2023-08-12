@@ -4,7 +4,7 @@ def no_c(my_string):
     for i in range(len(my_string)):
         if my_string[i] == 'c':
             continue
-        elif my_string[i] == 'C': 
+        elif my_string[i] == 'C':
             continue
         else:
             new_string += my_string[i]
