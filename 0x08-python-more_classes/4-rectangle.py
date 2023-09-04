@@ -50,4 +50,4 @@ class Rectangle:
         return arr
 
     def __repr__(self):
-        return f"MyClass({self.value})"
+        return f"MyClass({self.__width}, {self.__height})"
