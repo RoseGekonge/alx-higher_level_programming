@@ -41,4 +41,14 @@ class Rectangle:
         if self.__width == 0 or self.__height == 0:
             return 0
         else:
-            return (self.__width + self.__height + self.__width + self.__height)
+            return 2 * (self.__width + self.__height)
+
+    def __str__(self):
+        arr = ""
+        if self.__width != 0 and self.__height != 0:
+            arr += "\n".join("#" * self.__width
+                    for k in range(self.__height))
+        return arr
+
+    def __repr__(self):
+        return "<3-rectangle.Rectangle object at 0x7f92a75a2eb8>"
