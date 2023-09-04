@@ -46,8 +46,7 @@ class Rectangle:
     def __str__(self):
         arr = ""
         if self.__width != 0 and self.__height != 0:
-            arr += "\n".join("#" * self.__width
-                    for k in range(self.__height))
+            arr += "\n".join("#" * self.__width for k in range(self.__height))
         return arr
 
     def __repr__(self):
