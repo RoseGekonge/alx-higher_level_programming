@@ -5,7 +5,7 @@
 class Rectangle:
     '''defining attributes for instances and class'''
     number_of_instances = 0
-    print_symbol = '#'
+    print_symbol = "#"
 
     def __init__(self, width=0, height=0):
         self.width = width
@@ -50,7 +50,7 @@ class Rectangle:
     def __str__(self):
         arr = ""
         if self.__width != 0 and self.__height != 0:
-            arr += "\n".join(Rectangle.print_symbol * self.__width for k in range(self.__height))
+            arr += "\n".join(self.print_symbol * self.__width for k in range(self.__height))
         return arr
 
     def __repr__(self):
