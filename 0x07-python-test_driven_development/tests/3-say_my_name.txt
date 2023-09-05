@@ -1,0 +1,46 @@
+'''
+# Import the required function
+>>> from importlib import import_module
+>>> say_my_name = import_module('3-say_my_name').say_my_name
+
+# Valid arguments
+>>> say_my_name("Rose", "Kwamboka")
+My name is Rose Kwamboka
+>>> say_my_name("Leon", "Orina")
+My name is Leon Orina
+>>> say_my_name("Alloys", "Job")
+My name is Alloys Job
+
+# Invalid arguments
+>>> try:
+... 	say_my_name("Bill", 2)
+... except TypeError as ex:
+... 	print(ex.args[0])
+last_name must be a string
+>>> try:
+...     say_my_name(2, "Michelle")
+... except TypeError as ex:
+...     print(ex.args[0])
+first_name must be a string
+>>> try:
+...     say_my_name("Bill", True)
+... except TypeError as ex:
+...     print(ex.args[0])
+last_name must be a string
+>>> try:
+...     say_my_name("Bill", ['a', 'bb', 'ccc'])
+... except TypeError as ex:
+...     print(ex.args[0])
+last_name must be a string
+>>> try:
+...     say_my_name(False, "Michelle")
+... except TypeError as ex:
+...     print(ex.args[0])
+first_name must be a string
+>>> try:
+...     say_my_name({'first_name': 'Christopher', 'Last_name': 'Orina'}, "Michelle")
+... except TypeError as ex:
+...     print(ex.args[0])
+first_name must be a string
+
+'''

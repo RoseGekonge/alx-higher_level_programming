@@ -1,0 +1,49 @@
+# Import the required function
+>>> from importlib import import_module
+>>> print_square = import_module('4-print_square').print_square
+
+# Valid arguments
+>>> print_square(1)
+#
+
+>>> print_square(3)
+###
+###
+###
+
+>>> print_square(7)
+#######
+#######
+#######
+#######
+#######
+#######
+#######
+
+
+# Invalid arguments
+>>> try:
+... 	print_square('a')
+... except TypeError as ex:
+... 	print(ex.args[0])
+size must be an integer
+>>> try:
+... 	print_square(-1)
+... except ValueError as ex:
+... 	print(ex.args[0])
+size must be >= 0
+>>> try:
+...     print_square(-5.6)
+... except TypeError as ex:
+...     print(ex.args[0])
+size must be an integer
+>>> try:
+...     print_square(['list', 'name'])
+... except TypeError as ex:
+...     print(ex.args[0])
+size must be an integer
+>>> try:
+...     print_square(-23)
+... except ValueError as ex:
+...     print(ex.args[0])
+size must be >= 0

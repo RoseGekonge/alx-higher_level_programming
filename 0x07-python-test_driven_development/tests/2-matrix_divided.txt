@@ -1,0 +1,43 @@
+'''
+# Import the required function
+>>> from importlib import import_module
+>>> matrix_divided = import_module('2-matrix_divided').matrix_divided
+
+# Valid arguments
+>>> matrix = [[1, 2, 3],[4, 5, 6]]
+>>> matrix_divided(matrix, 3)
+[[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
+>>> matrix = [[1, 2, 3],[4, 5, 6]]
+>>> matrix_divided(matrix, 2)
+[[0.5, 1.0, 1.5], [2.0, 2.5, 3.0]]
+>>> matrix = [[1, 2, 3],[4, 5, 6]]
+>>> matrix_divided(matrix, 4)
+[[0.25, 0.5, 0.75], [1.0, 1.25, 1.5]]
+
+# Invalid arguments
+>>> try:
+... 	array = [1, 2, 3, 4, 5, 6]
+... 	matrix_divided(array, 3)
+... except TypeError as ex:
+... 	print(ex.args[0])
+matrix must be a matrix (list of lists) of integers/floats
+>>> try:
+... 	array = [[1, 2, 3, 4], [5, 6]]
+...     matrix_divided(array, 3)
+... except TypeError as ex:
+...     print(ex.args[0])
+Each row of the matrix must have the same size
+>>> try:
+... 	array = [[1, 2, 3], [4, 5, 6]]
+...     matrix_divided(array, '3')
+... except TypeError as ex:
+...     print(ex.args[0])
+div must be a number
+>>> try:
+... 	array = [[1, 2, 3], [4, 5, 6]]
+...     matrix_divided(array, 0)
+... except ZeroDivisionError as ex:
+...     print(ex.args[0])
+division by zero
+
+'''
