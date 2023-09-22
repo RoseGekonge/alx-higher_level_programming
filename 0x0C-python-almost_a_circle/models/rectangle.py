@@ -2,7 +2,7 @@
 """rectangle class"""
 
 
-from base import Base
+from models.base import Base
 class Rectangle(Base):
     """class with defined attributes and methods"""
     def __init__(self, width, height, x=0, y=0, id=None):
