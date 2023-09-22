@@ -1,16 +1,16 @@
 #!/usr/bin/python3
 """rectangle class"""
-
-
 from models.base import Base
+
+
 class Rectangle(Base):
     """class with defined attributes and methods"""
     def __init__(self, width, height, x=0, y=0, id=None):
         super().__init__()
-        self.__width = width
-        self.__height = height
-        self.__x = x
-        self.__y = y
+        self.width = width
+        self.height = height
+        self.x = x
+        self.y = y
 
     @property
     def height(self):
