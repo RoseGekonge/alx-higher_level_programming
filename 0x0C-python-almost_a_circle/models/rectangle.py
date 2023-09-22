@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """rectangle class"""
 from models.base import Base
+import tkinter as TK
 
 
 class Rectangle(Base):
