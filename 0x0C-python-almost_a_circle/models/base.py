@@ -1,10 +1,11 @@
 #!/usr/bin/python3
 """base class"""
-
-
 import json
+import tkinter as TK
 import csv
 import turtle
+
+
 class Base:
     """class with attributes defined"""
     __nb_objects = 0
@@ -89,7 +90,7 @@ class Base:
             turt.hideturtle()
 
         turt.color("#b5e3d8")
-	for sq in list_squares:
+        for sq in list_squares:
             turt.showturtle()
             turt.up()
             turt.goto(sq.x, sq.y)
